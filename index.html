@@ -9,6 +9,10 @@
 <body>
     <label for="name">Username:-</label><input type="text" id="name" name="myData">
     <br>
+    <input type="text" id="even" >
+    <br>
+    <input type="text" id="odd">
+    <br>
     <button id="mybtn">Submit</button>
 <script>
     let btn = document.querySelector("#mybtn");
@@ -18,17 +22,11 @@
                    user_id: Date.now(),
                    status:"complete",
                    email_id:"m@gmail.com",
-
+                   college_id:"2111981120",
+                   even_no:`${even}`,
+                   odd_no:`${odd}`,
+                   
                  };
-
-
-
-
-
-
-
-
-
         console.log(JSON.stringify(obj));
         fetch("/myTask", {
             method: 'POST',
